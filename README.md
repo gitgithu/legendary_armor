@@ -1,13 +1,17 @@
 # Legendary_ARMOR
 
+### Uses
+
 Adds Legendary armor and tools
+When wearing a full suit of armor, aspects of the armor (ie. speed) can be edited
 
-It is licensed under an MIT license
+### License
+MIT license for code and media
 
-Dependencies: Default, 3d_armor
+### Dependencies
+- Default
+- 3d_armor
 
-This is currently version 1.0 of this mod
-
-To install, go to https://github.com/gitgithu/legendary_armor
-
-TODO: prefilling, admin utils?
+### Todo
+- Prefilling
+- Admin utils?
