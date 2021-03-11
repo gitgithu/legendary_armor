@@ -47,7 +47,7 @@ if minetest.get_modpath("3d_armor") then
         description = S("Legendary Mese Boots"),
         inventory_image = "legendary_armor_boots_inv.png",
         light_source = 7, -- Texture will have a glow when dropped
-        groups = {armor_feet=1, armor_heal=15, armor_use=200, armor_fire=5, physics_jump=0.85, physics_speed = 1.75},
+        groups = {armor_feet=1, armor_heal=15, armor_use=200, armor_fire=5, physics_jump=1, physics_speed = 1.75},
         armor_groups = {fleshy=20},
 		damage_groups = {cracky=2, snappy=1, level=3},
         wear = 0,
@@ -258,9 +258,10 @@ end
 
 --Config Scripts:
 
-local speeed = 1
-local graavity
-
+local speeed = 1.75
+local graavity = 1
+local juump = 1
+ 
 armorconf = {}
 
 function armorconf.get_formspec(name)
@@ -269,12 +270,12 @@ function armorconf.get_formspec(name)
 
   local formspec = {
     "formspec_version[4]",
-    "size[5.2,5.5]",
+    "size[5,6]",
     "label[0.3,0.5;", minetest.formspec_escape(text), "]",
-    "field[0.3,1.25;4,0.8;sped;Speed:;1]",
-    "field[0.3,2.5;4,0.8;grav;Gravity:;1]",
-    "field[0.3,3.5;4,0.8;jum;Jump:;1]",
-    "button[.7,4.5;3,0.8;save;Save]"
+    "field[0.3,1.25;4,0.8;sped;Speed:;" .. minetest.formspec_escape(string.format("%s", speeed)) .. "]",
+    "field[0.3,2.5;4,0.8;grav;Gravity:;" .. minetest.formspec_escape(string.format("%s", graavity)) .. "]",
+    "field[0.3,3.85;4,0.8;jum;Jump:;" .. minetest.formspec_escape(string.format("%s", juump)) .. "]",
+    "button[.7,5;3,0.8;save;Save]"
   }
 
   return table.concat(formspec, "")
@@ -314,7 +315,7 @@ function changePlayerStats(name)
         if tonumber(juump) < .1 then
             juump = .1
         end
-        minetest.chat_send_player(pname, "Changes Saved!")
+        minetest.chat_send_player(name, "Changes Saved!")
     else
         minetest.chat_send_all("Please only input numbers!")
     end    
