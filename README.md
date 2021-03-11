@@ -1,5 +1,4 @@
-# Legendary_ARMOR [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/gitgithu/legendary_armor)
-
+# Legendary_ARMOR [![ContentDB](https://content.minetest.net/packages/DynamaxPikachu/legendary_ore/shields/title/)](https://content.minetest.net/packages/DynamaxPikachu/legendary_ore/)
 ### Uses
 
 Adds Legendary armor and tools
