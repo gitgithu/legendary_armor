@@ -12,5 +12,4 @@ MIT license for code and media
 - 3d_armor
 
 ### Todo
-- Prefilling
 - Admin utils?
