@@ -1,4 +1,4 @@
-#Legendary_ARMOR
+# Legendary_ARMOR
 
 Adds Legendary armor and tools
 
